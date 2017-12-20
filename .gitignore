@@ -99,3 +99,9 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+anime_ids.json
+anime.csv
+anime.json
+similar.json
+rating.csv
