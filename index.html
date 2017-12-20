@@ -223,6 +223,14 @@
     </section>
     <script>
         $('#anime-select').chosen({ max_shown_results: 20 });
+        // Chosen touch support.
+        if ($('.chosen-container').length > 0) {
+            $('.chosen-container').on('touchstart', function (e) {
+                e.stopPropagation(); e.preventDefault();
+                // Trigger the mousedown event.
+                $(this).trigger('mousedown');
+            });
+        }
         $('#recommend-button').attr('disabled', 'disabled');
         $.ajax({
             url: './similar_anime.json'
